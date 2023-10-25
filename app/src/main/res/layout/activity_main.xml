@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:isScrollContainer="true">
+
+        <LinearLayout
+            android:id="@+id/box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="Wifi Info"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSID: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/bssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BSSID: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/frecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frecuencia: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/velocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velocidad: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/fuerzaSenal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuerza de la señal: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/redOculta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Está oculta la red?: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IP (privada): "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/puertaEnlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puerta de enlace: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/mascara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Máscara: "
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        </LinearLayout>
+
+</RelativeLayout>
