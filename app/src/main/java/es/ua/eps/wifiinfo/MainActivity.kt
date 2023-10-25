@@ -2,9 +2,10 @@ package es.ua.eps.wifiinfo
 
 import android.content.Context
 import android.net.wifi.WifiManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,11 +31,11 @@ class MainActivity : AppCompatActivity() {
 
             val velocidadText = findViewById<TextView>(R.id.velocidad)
             val velocidad = wifiInfo.linkSpeed
-            velocidadText.text = "Velocidad: $velocidad"
+            velocidadText.text = "Velocidad: $velocidad Mbps"
 
             val fuerzaSenalText = findViewById<TextView>(R.id.fuerzaSenal)
             val fuerzaSenal = wifiInfo.rssi
-            fuerzaSenalText.text = "Fuerza de la señal: $fuerzaSenal"
+            fuerzaSenalText.text = "Fuerza de la señal: $fuerzaSenal dBM"
 
             val redOcultaText = findViewById<TextView>(R.id.redOculta)
             val redOculta = wifiInfo.hiddenSSID
@@ -42,16 +43,28 @@ class MainActivity : AppCompatActivity() {
 
             val ipText = findViewById<TextView>(R.id.ip)
             val ip = dhcpInfo.ipAddress
-            ipText.text = "IP (privada): $ip"
+            val ipString: String = String.format(
+                "%d.%d.%d.%d",
+                ip and 0xff,
+                ip shr 8 and 0xff,
+                ip shr 16 and 0xff,
+                ip shr 24 and 0xff
+            )
+            ipText.text = "IP (privada): $ipString"
 
             val puertaEnlaceText = findViewById<TextView>(R.id.puertaEnlace)
             val puertaEnlace = dhcpInfo.gateway
             puertaEnlaceText.text = "Puerta de enlace: $puertaEnlace"
 
             val mascaraText = findViewById<TextView>(R.id.mascara)
-            // val mascara =
-            // mascaraText.text = "Máscara: $mascara"
+            val mascara = dhcpInfo.netmask
+            mascaraText.text = "Máscara: $mascara"
         }
+
+        // TODO: CHECK https://stackoverflow.com/questions/21391395/get-ssid-when-wifi-is-connected
+        // https://developer.android.com/reference/android/net/DhcpInfo#netmask
+        // https://developer.android.com/reference/android/net/wifi/WifiManager.html
+        // https://developer.android.com/reference/android/net/wifi/WifiInfo.html
 
     }
 }
