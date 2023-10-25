@@ -53,8 +53,15 @@ class MainActivity : AppCompatActivity() {
             ipText.text = "IP (privada): $ipString"
 
             val puertaEnlaceText = findViewById<TextView>(R.id.puertaEnlace)
-            val puertaEnlace = dhcpInfo.gateway // serverAddress
-            puertaEnlaceText.text = "Puerta de enlace: $puertaEnlace"
+            val pE = dhcpInfo.gateway // serverAddress
+            val gatewayString: String = String.format(
+                "%d.%d.%d.%d",
+                pE and 0xff,
+                pE shr 8 and 0xff,
+                pE shr 16 and 0xff,
+                pE shr 24 and 0xff
+            )
+            puertaEnlaceText.text = "Puerta de enlace: $gatewayString"
             // TODO: CHECK
 
             val mascaraText = findViewById<TextView>(R.id.mascara)
