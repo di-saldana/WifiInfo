@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
             val frecuenciaText = findViewById<TextView>(R.id.frecuencia)
             val frecuencia = wifiInfo.frequency
-            frecuenciaText.text = "Frecuencia: $frecuencia"
+            frecuenciaText.text = "Frecuencia: $frecuencia MHz"
 
             val velocidadText = findViewById<TextView>(R.id.velocidad)
             val velocidad = wifiInfo.linkSpeed
@@ -53,8 +53,9 @@ class MainActivity : AppCompatActivity() {
             ipText.text = "IP (privada): $ipString"
 
             val puertaEnlaceText = findViewById<TextView>(R.id.puertaEnlace)
-            val puertaEnlace = dhcpInfo.gateway
+            val puertaEnlace = dhcpInfo.gateway // serverAddress
             puertaEnlaceText.text = "Puerta de enlace: $puertaEnlace"
+            // TODO: CHECK
 
             val mascaraText = findViewById<TextView>(R.id.mascara)
             val mascara = dhcpInfo.netmask
