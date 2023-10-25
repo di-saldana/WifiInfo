@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             ipText.text = "IP (privada): $ipString"
 
             val puertaEnlaceText = findViewById<TextView>(R.id.puertaEnlace)
-            val pE = dhcpInfo.gateway // serverAddress
+            val pE = dhcpInfo.gateway
             val gatewayString: String = String.format(
                 "%d.%d.%d.%d",
                 pE and 0xff,
@@ -62,14 +62,13 @@ class MainActivity : AppCompatActivity() {
                 pE shr 24 and 0xff
             )
             puertaEnlaceText.text = "Puerta de enlace: $gatewayString"
-            // TODO: CHECK
 
             val mascaraText = findViewById<TextView>(R.id.mascara)
             val mascara = dhcpInfo.netmask
             mascaraText.text = "Máscara: $mascara"
         }
 
-        // TODO: CHECK https://stackoverflow.com/questions/21391395/get-ssid-when-wifi-is-connected
+        // https://stackoverflow.com/questions/21391395/get-ssid-when-wifi-is-connected
         // https://developer.android.com/reference/android/net/DhcpInfo#netmask
         // https://developer.android.com/reference/android/net/wifi/WifiManager.html
         // https://developer.android.com/reference/android/net/wifi/WifiInfo.html

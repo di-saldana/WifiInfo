@@ -23,14 +23,15 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/ssid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SSID: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -39,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BSSID: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -48,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Frecuencia: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -57,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Velocidad: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -66,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fuerza de la señal: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -75,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Está oculta la red?: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -84,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="IP (privada): "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -93,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Puerta de enlace: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -102,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Máscara: "
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="20sp"/>
         </LinearLayout>
